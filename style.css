@@ -110,15 +110,18 @@ footer {
 }
 
 .place-item {
-    background-color: white;
+background-color: white;
     border-radius: 8px;
     overflow: hidden;
     box-shadow: 0 4px 15px rgba(0,0,0,0.05);
     margin-bottom: 40px;
-    padding: 25px;
     border-left: 5px solid var(--primary);
-    display: flex;
-    flex-direction: column;
+    transition: transform 0.3s, box-shadow 0.3s; 
+}
+
+.place-item:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
 }
 
 .place-img {
@@ -149,19 +152,27 @@ footer {
     letter-spacing: 1px;
 }
 
-.place-meta a.meta-link {
-    color: var(--accent);
-    text-decoration: none;
-    transition: opacity 0.3s;
-}
-
-.place-meta a.meta-link:hover {
-    opacity: 0.8;
-}
-
 .place-desc {
     font-size: 1.05rem;
     color: #4a4a4a;
+}
+
+.card-link {
+    text-decoration: none;
+    color: inherit; 
+    display: flex;
+    flex-direction: column; 
+    width: 100%;
+    height: 100%;
+    padding: 25px; 
+}
+
+.meta-city {
+    font-weight: bold;
+    color: var(--accent);
+    font-size: 0.95rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
 .main-showcase {
@@ -324,8 +335,7 @@ footer {
 }
 
 @media (min-width: 768px) {
-    /* Layout orizzontale per le liste principali */
-    .place-item {
+    .card-link {
         flex-direction: row; 
     }
 
@@ -333,9 +343,9 @@ footer {
         width: 220px; 
         height: 220px; 
         flex-shrink: 0; 
+        border-radius: 4px;
     }
 
-    /* Layout a griglia per le attività delle città */
     .activities-grid {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
