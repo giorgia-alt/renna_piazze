@@ -349,8 +349,6 @@ background-color: white;
 
     .card-link {
         flex-direction: row; 
-        height: 220px;
-        align-items: stretch;
     }
 
     .card-block {
