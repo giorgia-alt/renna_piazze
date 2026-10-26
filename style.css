@@ -347,7 +347,13 @@ background-color: white;
 
 @media (min-width: 768px) {
 
-    .card-link, .card-block {
+    .card-link {
+        flex-direction: row; 
+        height: 220px;
+        align-items: stretch;
+    }
+
+    .card-block {
         flex-direction: row; 
         height: 220px;
         align-items: stretch;
